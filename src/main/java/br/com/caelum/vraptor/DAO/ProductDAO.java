@@ -3,18 +3,18 @@ package br.com.caelum.vraptor.DAO;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
 
 import br.com.caelum.vraptor.model.Product;
 
 public class ProductDAO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("nn");
-	private EntityManager manager = factory.createEntityManager();
+	
+	@Inject
+	private EntityManager manager;
 
 
 	public void insert(Product product) {
