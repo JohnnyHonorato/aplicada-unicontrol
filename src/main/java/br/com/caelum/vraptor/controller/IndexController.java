@@ -25,6 +25,6 @@ public class IndexController {
 
 	@Path("/")
 	public void index() {
-		result.include("Foii", "VRaptor!");
+		result.include("Testando segunda vez!", "VRaptor!");
 	}
 }
