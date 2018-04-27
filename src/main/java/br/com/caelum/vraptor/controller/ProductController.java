@@ -14,4 +14,8 @@ public class ProductController {
 	public void insert(Product product) {
 		bd.insert(product);
 	}
+	
+	public void d() {
+		System.out.println("dasdas");
+	}
 }
