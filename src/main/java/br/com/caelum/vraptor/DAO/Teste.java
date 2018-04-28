@@ -11,6 +11,8 @@ public class Teste {
 	
 		Product i = new Product();
 		i.setCategory(Category.ELETRICA);
+		
+		
 		d.insert(i);
 	}
 
