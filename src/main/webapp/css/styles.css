@@ -1,0 +1,86 @@
+* {
+	font-family: 'bahnschrift';
+	color: #448B93;
+}
+
+@font-face {
+	font-family: 'bahnschrift';
+	src: url('assets/font/bahnschrift.woff') format('woff');
+}
+
+#confirm {
+	position: left;
+}
+
+#sidebar-wrapper {
+	left: -300px;
+	width: 300px;
+	background-color: #51A8B1;
+	color: white;
+	position: fixed;
+	height: 100%;
+	z-index: 1;
+}
+
+.sidebar-nav {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	font-size: 20px;
+	text-indent: 55px;
+	line-height: 70px;
+}
+
+.sidebar-nav li a {
+	color: white;
+	display: block;
+	text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+	background: #448B93;
+	color: white;
+	text-decoration: none;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+	background-color: #448B93;
+	text-decoration: none;
+}
+
+#ufpb-logo {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-left: 110px;
+}
+
+#sidebar-wrapper.sidebar-toggle {
+	transition: all 0.3s ease-out;
+	margin-left: -200px;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-left: 325px;
+}
+
+.btn-primary {
+	background-color: #51A8B1;
+	border-color: #51A8B1;
+}
+
+#sidebar-wrapper.sidebar-toggle {
+	transition: 0s;
+	left: 200px;
+}

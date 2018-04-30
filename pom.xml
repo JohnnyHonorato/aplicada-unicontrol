@@ -24,14 +24,14 @@
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet-core</artifactId>
-			<version>${weld.version}</version>
+			<version>3.0.4.Final</version>
 		</dependency>
 
 
 		<dependency>
 			<groupId>org.jboss.weld</groupId>
 			<artifactId>weld-core-impl</artifactId>
-			<version>${weld.version}</version>
+			<version>3.0.4.Final</version>
 		</dependency>
 
 		<dependency>
