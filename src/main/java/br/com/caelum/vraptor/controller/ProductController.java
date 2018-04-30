@@ -1,6 +1,9 @@
 package br.com.caelum.vraptor.controller;
 
+import java.util.List;
+
 import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.DAO.ProductDAO;
 import br.com.caelum.vraptor.model.Product;
@@ -15,7 +18,8 @@ public class ProductController {
 		bd.insert(product);
 	}
 	
-	public void d() {
-		System.out.println("dasdasdasdasdas");
+	@Get
+	public List<Product> listar(){
+		return bd.getAll();
 	}
 }
