@@ -18,7 +18,7 @@
 					<a href="#"><img width="111px" height="160"
 						src="assets/img/ufpb2.png" /></a>
 				</div>
-				<li><a href="#">Produtos</a></li>
+				<li><a href="./product/listar">Produtos</a></li>
 				<li><a href="#">Entradas</a></li>
 				<li><a href="#">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
