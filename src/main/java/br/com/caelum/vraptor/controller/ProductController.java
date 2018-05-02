@@ -7,6 +7,7 @@ import java.util.Locale.Category;
 import javax.inject.Inject;
 
 import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
@@ -23,7 +24,7 @@ public class ProductController {
 	@Post
 	public void insert(Product product) {
 		bd.insert(product);
-		result.forwardTo(this).confirmacao();
+		result.redirectTo(this).confirmacaoCad();
 	}
 
 	@Get
@@ -37,7 +38,19 @@ public class ProductController {
 	}
 
 	@Get
-	public void confirmacao() {
-		
+	public void confirmacaoCad() {
+
+	}
+
+	@Get
+	public void confirmacaoExcluir() {
+
+	}
+
+	@Delete
+	public void remover(Product product) {
+		bd.remove(product);
+		result.redirectTo(this).confirmacaoExcluir();
+
 	}
 }
