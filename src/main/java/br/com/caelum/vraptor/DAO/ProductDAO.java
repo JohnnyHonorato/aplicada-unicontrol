@@ -31,10 +31,10 @@ public class ProductDAO implements Serializable {
 		return manager.find(Product.class, id);
 	}
 
-	public void remove(Long id) {
-		Product product = manager.find(Product.class, id);
+	public void remove(Product product) {
+		Product p = manager.find(Product.class, product.getId());
 		manager.getTransaction().begin();
-		product.setAtivo(false);
+		manager.remove(p);
 		manager.getTransaction().commit();
 	}
 

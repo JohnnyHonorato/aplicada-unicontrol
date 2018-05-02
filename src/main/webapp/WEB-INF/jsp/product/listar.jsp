@@ -61,6 +61,14 @@
 							<td>${product.amount}</td>
 							<td>${product.description}</td>
 							<td>${product.category}</td>
+							<td>
+								<form action="<c:url value='/product/remover'/>" method="post">
+									<input name="product.id" value="${product.id}" type="hidden" />
+									<button type="button" class="btn btn-success">Editar</button>
+									<button type="submit" name="_method" value="DELETE"
+										class="btn btn-danger">Excluir</button>
+								</form>
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>

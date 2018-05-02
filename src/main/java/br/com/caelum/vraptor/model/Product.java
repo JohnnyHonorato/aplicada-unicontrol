@@ -15,12 +15,7 @@ public class Product {
 	private String description;
 	private Category category;
 	private int amount;
-	private boolean ativo;
 
-	public Product() {
-		this.ativo = true;
-
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,13 +51,6 @@ public class Product {
 		this.amount = amout;
 	}
 
-	public boolean isAtivo() {
-		return ativo;
-	}
-
-	public void setAtivo(boolean ativo) {
-		this.ativo = ativo;
-	}
 
 	@Enumerated(EnumType.STRING)
 	public Category getCategory() {
