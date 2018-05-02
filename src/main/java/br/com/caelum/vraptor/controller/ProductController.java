@@ -51,6 +51,10 @@ public class ProductController {
 	public void remover(Product product) {
 		bd.remove(product);
 		result.redirectTo(this).confirmacaoExcluir();
-
+	}
+	
+	@Get
+	public Product formularioPreenchido(Product product) {
+		return bd.getById(product.getId());
 	}
 }
