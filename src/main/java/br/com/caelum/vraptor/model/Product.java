@@ -15,6 +15,7 @@ public class Product {
 	private String description;
 	private Category category;
 	private int amount;
+	private boolean ativo;
 
 
 	@Id
@@ -59,6 +60,14 @@ public class Product {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
 	}
 
 }
