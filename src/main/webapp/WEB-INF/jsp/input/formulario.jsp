@@ -34,30 +34,30 @@
 				<h2>Nova Entrada</h2>
 			</div>
 			<div class="col-md-12">
-				<form id="cadastrar">
+				<form action="<c:url value='/input/insert'/> " method="post">
 					<br>
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="name">Código</label> <input type="text"
-								class="form-control" id="name" placeholder="Digite o código"
-								required>
+								class="form-control" name="input.cod"
+								placeholder="Digite o código" required>
 						</div>
 						<div class="form-group col-md-6">
 							<label for="amount">Quantidade</label> <input type="number"
-								class="form-control" id="amount"
+								class="form-control" name="input.amount"
 								placeholder="Digite a quantidade" required>
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="name">Número do Pregão</label> <input type="number"
-								class="form-control" id="name" placeholder="Digite o número"
-								required>
+								class="form-control" name="input.pregao"
+								placeholder="Digite o número" required>
 						</div>
 						<div class="form-group col-md-6">
 							<label for="amount">Nota de Empenho</label> <input type="text"
-								class="form-control" id="amount" placeholder="Digite o número"
-								required>
+								class="form-control" name="input.empenho"
+								placeholder="Digite o número" required>
 						</div>
 					</div>
 			</div>
