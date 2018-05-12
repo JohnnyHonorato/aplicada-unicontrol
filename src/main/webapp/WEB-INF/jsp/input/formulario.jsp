@@ -39,7 +39,7 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="name">Código</label> <input type="text"
-								class="form-control" name="input.cod"
+								class="form-control" name="input.id_product"
 								placeholder="Digite o código" required>
 						</div>
 						<div class="form-group col-md-6">
@@ -51,12 +51,12 @@
 					<div class="row">
 						<div class="form-group col-md-6">
 							<label for="name">Número do Pregão</label> <input type="number"
-								class="form-control" name="input.pregao"
+								class="form-control" name="input.NumeroDePregao"
 								placeholder="Digite o número" required>
 						</div>
 						<div class="form-group col-md-6">
 							<label for="amount">Nota de Empenho</label> <input type="text"
-								class="form-control" name="input.empenho"
+								class="form-control" name="input.notaDeEmpenho"
 								placeholder="Digite o número" required>
 						</div>
 					</div>
