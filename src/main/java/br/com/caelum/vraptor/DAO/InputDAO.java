@@ -22,7 +22,7 @@ public class InputDAO implements Serializable {
 	public void insert(Input input) {
 		if (input.getAmount() <= 0)
 			throw new IllegalArgumentException();
-		productBD.updateAmount(input.getAmount(), input.getProduct().getId());
+		productBD.updateAmount(input.getAmount(), input.getId_product());
 		manager.getTransaction().begin();
 		input.setData(Calendar.getInstance().getTime());
 		manager.merge(input);
@@ -35,7 +35,7 @@ public class InputDAO implements Serializable {
 
 	public void remove(Long id) {
 		Input input = getById(id);
-		productBD.updateAmount((input.getAmount() * -1), input.getProduct().getId());
+		productBD.updateAmount((input.getAmount() * -1), input.getId_product());
 		manager.remove(input);
 		manager.flush();
 	}

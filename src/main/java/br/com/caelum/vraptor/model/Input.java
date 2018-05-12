@@ -15,7 +15,7 @@ public class Input {
 	private long id;
 	private int amount;
 	private Date data;
-	private Product product;
+	private long id_product;
 	private String NumeroDePregao;
 	private String notaDeEmpenho;
 
@@ -46,15 +46,6 @@ public class Input {
 		this.data = data;
 	}
 
-	@ManyToOne
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
 	public String getNumeroDePregao() {
 		return NumeroDePregao;
 	}
@@ -69,6 +60,14 @@ public class Input {
 
 	public void setNotaDeEmpenho(String notaDeEmpenho) {
 		this.notaDeEmpenho = notaDeEmpenho;
+	}
+
+	public long getId_product() {
+		return id_product;
+	}
+
+	public void setId_product(long id_product) {
+		this.id_product = id_product;
 	}
 
 }
