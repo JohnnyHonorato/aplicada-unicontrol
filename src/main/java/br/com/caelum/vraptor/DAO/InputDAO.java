@@ -15,8 +15,9 @@ import br.com.caelum.vraptor.model.Product;
 public class InputDAO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("PU");
+	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("nn");
 	private EntityManager manager = factory.createEntityManager();
+
 	private ProductDAO productBD = new ProductDAO();
 
 	public void insert(Input input) {
