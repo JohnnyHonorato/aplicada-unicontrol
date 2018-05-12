@@ -1,6 +1,5 @@
 package br.com.caelum.vraptor.controller;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale.Category;
 
@@ -54,7 +53,7 @@ public class ProductController {
 	}
 	
 	@Get
-	public Product formularioPreenchido(Product product) {
-		return bd.getById(product.getId());
+	public Product pesquisarProduct(long id) {
+		return bd.getById(id);
 	}
 }
