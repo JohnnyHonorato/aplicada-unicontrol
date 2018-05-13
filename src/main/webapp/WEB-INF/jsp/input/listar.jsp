@@ -56,13 +56,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${productList}" var="product">
+					<c:forEach items="${inputList}" var="input">
 						<tr>
-							<td>${product.id}</td>
-							<td>${product.name}</td>
-							<td>${product.amount}</td>
-							<td>${product.description}</td>
-							<td>${product.category}</td>
+							<td>${input.id_product}</td>
+							<td></td>
+							<td>${input.amount}</td>
+							<td></td>
+							<td>${input.numeroDePregao}</td>
+							<td>${input.notaDeEmpenho}</td>
+							<td>${input.data}</td>
+
+							<td>
+								<form action="<c:url value='/product/remover'/>" method="post">
+									<input name="product.id" value="${input.id_product}" type="hidden" />
+									<button type="submit" name="_method" value="DELETE"
+										class="btn btn-danger">Excluir</button>
+								</form>
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>

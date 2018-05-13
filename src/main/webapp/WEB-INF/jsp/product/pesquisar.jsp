@@ -78,9 +78,10 @@
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>
 								</form>
-								<form action="<c:url value='/product/edita?id=${product.id}'/>" method="POST">
+								<form action="<c:url value='/product/formularioPreenchido'/>"
+									method="post">
 									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="get"
+									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-success">Editar</button>
 								</form>
 							</td>
