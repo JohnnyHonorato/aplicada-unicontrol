@@ -38,8 +38,8 @@ public class InputController {
 	}
 	
 	@Delete
-	public void remover(Long id) {
-		bd.remove(id);
+	public void remover(Input input) {
+		bd.remove(input);
 		result.redirectTo(this).confirmacaoExcluir();
 	}
 
