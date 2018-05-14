@@ -31,33 +31,40 @@
 		style="padding-left: 325px; padding-top: 50px">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Nova Entrada</h2>
+				<h2>Editar Produto</h2>
 			</div>
 			<div class="col-md-12">
-				<form action="<c:url value='/input/insert'/> " method="post">
+				<form action="<c:url value='/product/atualiza'/> " method="post">
 					<br>
 					<div class="row">
 						<div class="form-group col-md-6">
-							<label for="name">Código</label> <input type="text"
-								class="form-control" name="input.id_product"
-								placeholder="Digite o código" required>
+							<label for="name">Nome</label> <input type="text"
+								class="form-control" name="product.name" value="${product.name}"
+								placeholder="Digite o nome" />
 						</div>
 						<div class="form-group col-md-6">
-							<label for="amount">Quantidade</label> <input type="number"
-								class="form-control" name="input.amount"
-								placeholder="Digite a quantidade" required>
+							<label for="description">Descrição</label> <input type="text"
+								class="form-control" name="product.description"
+								value="${product.description}" placeholder="Digite a descrição" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-md-6">
-							<label for="name">Número do Pregão</label> <input type="number"
-								class="form-control" name="input.NumeroDePregao"
-								placeholder="Digite o número" required>
+							<label for="amount">Quantidade</label> <input type="number"
+								class="form-control" name="product.amount"
+								value="${product.amount}" placeholder="Digite a quantidade" />
 						</div>
 						<div class="form-group col-md-6">
-							<label for="amount">Nota de Empenho</label> <input type="text"
-								class="form-control" name="input.notaDeEmpenho"
-								placeholder="Digite o número" required>
+							<label for="name">Categoria</label> <input type="text"
+								class="form-control" name="product.category"
+								value="${product.category}" placeholder="Digite a categoria" />
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label for="name"></label> <input type="hidden"
+									class="form-control" name="product.id" value="${product.id}"
+									placeholder="Digite o nome" />
+							</div>
 						</div>
 					</div>
 			</div>
@@ -65,10 +72,11 @@
 		<br>
 		<div class="row">
 			<div class="col-md-12" id="botao-salvar">
-				<button type="submit" class="btn btn-primary">Cadastrar</button>
+				<button type="submit" class="btn btn-primary">Salvar</button>
 				<a href="<c:url value='/'/>" class="btn btn-danger">Cancelar</a>
 			</div>
 		</div>
+		</form>
 	</div>
 	</main>
 </body>

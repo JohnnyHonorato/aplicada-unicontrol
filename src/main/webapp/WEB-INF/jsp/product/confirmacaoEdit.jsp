@@ -7,8 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Subprefeitura CCAE/UFPB</title>
-<link rel="stylesheet" href="./css/bootstrap.css">
-<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 	<div class="container">
@@ -16,15 +16,29 @@
 			<ul class="sidebar-nav">
 				<div class="row" id="ufpb-logo">
 					<a href="#"><img width="111px" height="160"
-						src="assets/img/ufpb2.png" /></a>
+						src="../assets/img/ufpb2.png" /></a>
 				</div>
-				<li><a href="./product/listar">Produtos</a></li>
-				<li><a href="./input/listar">Entradas</a></li>
+				<li><a href="../product/listar">Produtos</a></li>
+				<li><a href="../input/listar">Entradas</a></li>
 				<li><a href="#">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
 			</ul>
 		</div>
 	</div>
+	<main>
+	<div id="main" class="container-fluid"
+		style="padding-left: 325px; padding-top: 50px">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Editar Produto</h2>
+				<br>
+				<h4>Produto editador com sucesso!</h4>
+				<br>
+				<a href="<c:url value='/product/formulario'/>" class="btn btn-primary">Novo Produto</a> 
+				<a href="<c:url value='/product/listar'/>" class="btn btn-danger">Voltar</a>
+			</div>
+		</div>
+	</main>
 </body>
 </html>

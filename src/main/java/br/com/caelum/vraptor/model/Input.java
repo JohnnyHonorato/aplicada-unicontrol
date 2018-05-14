@@ -15,7 +15,7 @@ public class Input {
 	private int amount;
 	private Date data;
 	private long id_product;
-	private String NumeroDePregao;
+	private String numeroDePregao;
 	private String notaDeEmpenho;
 
 	@Id
@@ -46,11 +46,11 @@ public class Input {
 	}
 
 	public String getNumeroDePregao() {
-		return NumeroDePregao;
+		return numeroDePregao;
 	}
 
 	public void setNumeroDePregao(String numeroDePregao) {
-		NumeroDePregao = numeroDePregao;
+		this.numeroDePregao = numeroDePregao;
 	}
 
 	public String getNotaDeEmpenho() {

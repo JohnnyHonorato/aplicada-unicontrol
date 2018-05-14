@@ -18,8 +18,8 @@
 					<a href="#"><img width="111px" height="160"
 						src="../assets/img/ufpb2.png" /></a>
 				</div>
-				<li><a href="../product/listar">Produtos</a></li>
-				<li><a href="../input/listar">Entradas</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Entradas</a></li>
 				<li><a href="#">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
@@ -32,14 +32,14 @@
 	style="padding-left: 325px; padding-top: 50px">
 	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Produtos</h2>
+			<h2>Pesquisar Produto</h2>
 		</div>
 		<div class="col-sm-6">
 			<div class="input-group h2">
 				<input name="data[search]" class="form-control" id="search"
 					type="text" placeholder="Pesquisar produto"> <span
 					class="input-group-btn">
-					<button action="<c:url value='/product/pesquisarProduct'/>" class="btn btn-primary" type="submit">
+					<button class="btn btn-primary" type="submit">
 						<span class="far fa-searc"></span>
 					</button>
 				</span>

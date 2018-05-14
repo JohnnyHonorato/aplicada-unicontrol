@@ -18,8 +18,8 @@
 					<a href="#"><img width="111px" height="160"
 						src="../assets/img/ufpb2.png" /></a>
 				</div>
-				<li><a href="../product/listar">Produtos</a></li>
-				<li><a href="../input/listar">Entradas</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Entradas</a></li>
 				<li><a href="#">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
@@ -39,7 +39,7 @@
 				<input name="data[search]" class="form-control" id="search"
 					type="text" placeholder="Pesquisar produto"> <span
 					class="input-group-btn">
-					<button action="<c:url value='/product/pesquisarProduct'/>" class="btn btn-primary" type="submit">
+					<button class="btn btn-primary" type="submit">
 						<span class="far fa-searc"></span>
 					</button>
 				</span>
@@ -78,9 +78,10 @@
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>
 								</form>
-								<form action="<c:url value='/product/edita?id=${product.id}'/>" method="POST">
+								<form action="<c:url value='/product/formularioPreenchido'/>"
+									method="post">
 									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="get"
+									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-success">Editar</button>
 								</form>
 							</td>
