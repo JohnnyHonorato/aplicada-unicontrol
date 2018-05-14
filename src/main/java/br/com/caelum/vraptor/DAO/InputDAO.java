@@ -29,6 +29,11 @@ public class InputDAO implements Serializable {
 		manager.merge(input);
 		manager.getTransaction().commit();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Input> getAll() {
+		return manager.createQuery("FROM " + Input.class.getName()).getResultList();
+	}
 
 	public Input getById(Long id) {
 		return manager.find(Input.class, id);

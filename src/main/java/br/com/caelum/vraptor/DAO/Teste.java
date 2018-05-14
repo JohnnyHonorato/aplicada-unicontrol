@@ -10,11 +10,7 @@ public class Teste {
 		
 		InputDAO d = new InputDAO();
 	
-		Input ds = new Input();
-		ds.setAmount(10);
-		ds.setId_product(4);
-		
-		d.insert(ds);
+		System.out.println(d.getAll());
 		
 	
 	
