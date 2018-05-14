@@ -67,7 +67,7 @@
 							<td>${input.data}</td>
 
 							<td>
-								<form action="<c:url value='/product/remover'/>" method="post">
+								<form action="<c:url value='/input/remover'/>" method="post">
 									<input name="product.id" value="${input.id_product}" type="hidden" />
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>

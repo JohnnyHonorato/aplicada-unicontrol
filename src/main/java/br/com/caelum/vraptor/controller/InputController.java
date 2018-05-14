@@ -6,6 +6,7 @@ import java.util.Locale.Category;
 import javax.inject.Inject;
 
 import br.com.caelum.vraptor.Controller;
+import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
@@ -36,4 +37,14 @@ public class InputController {
 		return bd.getAll();
 	}
 	
+	@Delete
+	public void remover(Long id) {
+		bd.remove(id);
+		result.redirectTo(this).confirmacaoExcluir();
+	}
+
+	private void confirmacaoExcluir() {
+		
+	}
+
 }

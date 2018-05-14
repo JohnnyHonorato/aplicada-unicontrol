@@ -22,22 +22,21 @@ public class ProductController {
 	@Inject
 	private Result result;
 
-	
 	@Post
 	public void insert(Product product) {
 		bd.insert(product);
 		result.redirectTo(this).confirmacaoCad();
 	}
-	
+
 	@Post
 	public void atualiza(Product product) {
 		bd.update(product);
 		result.redirectTo(this).listar();
 	}
-	
+
 	@Get
 	private void confirmacaoEdit() {
-		
+
 	}
 
 	@Get
@@ -75,4 +74,5 @@ public class ProductController {
 	public Product pesquisarProduct(long id) {
 		return bd.getById(id);
 	}
+
 }
