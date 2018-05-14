@@ -10,7 +10,7 @@ public class Teste {
 		
 		InputDAO d = new InputDAO();
 	
-		System.out.println(d.getAll());
+		d.remove(1);
 		
 	
 	

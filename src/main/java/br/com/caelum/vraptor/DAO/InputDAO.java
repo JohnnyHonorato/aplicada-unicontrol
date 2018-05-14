@@ -42,8 +42,9 @@ public class InputDAO implements Serializable {
 	public void remove(long id) {
 		Input input = getById(id);
 		productBD.updateAmount((input.getAmount() * -1), input.getId_product());
+		manager.getTransaction().begin();
 		manager.remove(input);
-		manager.flush();
+		manager.getTransaction().commit();
 	}
 
 	public List<Product> getAllProductFromInputById(long id) {
