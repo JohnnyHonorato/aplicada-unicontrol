@@ -35,18 +35,18 @@ public class InputDAO implements Serializable {
 		return manager.createQuery("FROM " + Input.class.getName()).getResultList();
 	}
 
-	public Input getById(Long id) {
+	public Input getById(long id) {
 		return manager.find(Input.class, id);
 	}
 
-	public void remove(Long id) {
+	public void remove(long id) {
 		Input input = getById(id);
 		productBD.updateAmount((input.getAmount() * -1), input.getId_product());
 		manager.remove(input);
 		manager.flush();
 	}
 
-	public List<Product> getAllProductFromInputById(Long id) {
+	public List<Product> getAllProductFromInputById(long id) {
 		String query = "select i.product from Input i where i.product.id = :idProduct";
 		return manager.createQuery(query).setParameter("idProduct", id).getResultList();
 	}
