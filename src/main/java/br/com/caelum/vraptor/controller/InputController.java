@@ -24,7 +24,7 @@ public class InputController {
 	@Post
 	public void insert(Input input) {
 		bd.insert(input);
-		
+		result.redirectTo(this).confirmacaoCad();
 	}
 	
 	@Get
@@ -43,7 +43,13 @@ public class InputController {
 		result.redirectTo(this).confirmacaoExcluir();
 	}
 
+	@Get
 	private void confirmacaoExcluir() {
+		
+	}
+	
+	@Get
+	private void confirmacaoCad() {
 		
 	}
 

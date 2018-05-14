@@ -45,10 +45,8 @@
 			<table class="table table-striped" cellspacing="0" cellpadding="0">
 				<thead>
 					<tr>
-						<th>Código</th>
-						<th>Nome</th>
+						<th>Código do Produto</th>
 						<th>Quantidade</th>
-						<th>Categoria</th>
 						<th>Nº do Pregão</th>
 						<th>Nota de Empenho</th>
 						<th>Data</th>
@@ -59,9 +57,7 @@
 					<c:forEach items="${inputList}" var="input">
 						<tr>
 							<td>${input.id_product}</td>
-							<td></td>
 							<td>${input.amount}</td>
-							<td></td>
 							<td>${input.numeroDePregao}</td>
 							<td>${input.notaDeEmpenho}</td>
 							<td>${input.data}</td>
