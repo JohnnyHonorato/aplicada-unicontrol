@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Subprefeitura CCAE/UFPB</title>
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/styles.css">
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -36,13 +43,8 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search"
-					type="text" placeholder="Pesquisar produto"> <span
-					class="input-group-btn">
-					<button action="<c:url value='/product/pesquisarProduct'/>" class="btn btn-primary" type="submit">
-						<span class="far fa-searc"></span>
-					</button>
-				</span>
+				<input name="consulta" class="form-control" id="txt_consulta"
+					type="text" placeholder="Pesquisar produto"> 
 			</div>
 		</div>
 		<div class="col-sm-3" id="b-novo-produto">
@@ -53,7 +55,7 @@
 	<br>
 	<div id="list" class="row">
 		<div class="table-responsive col-md-12">
-			<table class="table table-striped" cellspacing="0" cellpadding="0">
+			<table id="tabela" class="table table-hover">
 				<thead>
 					<tr>
 						<th>Código</th>
@@ -78,7 +80,8 @@
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>
 								</form>
-								<form action="<c:url value='/product/edita?id=${product.id}'/>" method="POST">
+								<form action="<c:url value='/product/edita?id=${product.id}'/>"
+									method="POST">
 									<input name="product.id" value="${product.id}" type="hidden" />
 									<button type="submit" name="_method" value="get"
 										class="btn btn-success">Editar</button>
@@ -90,6 +93,9 @@
 			</table>
 		</div>
 	</div>
-</div>
-</main>
+	<script>
+		$('input#txt_consulta').quicksearch('table#tabela tbody tr');
+	</script>
+	</body>
 </html>
+

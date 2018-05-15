@@ -32,7 +32,7 @@
 	style="padding-left: 325px; padding-top: 50px">
 	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Produtos</h2>
+			<h2>Resultado Pesquisa</h2>
 		</div>
 		<div class="col-sm-6">
 			<div class="input-group h2">
@@ -44,10 +44,6 @@
 					</button>
 				</span>
 			</div>
-		</div>
-		<div class="col-sm-3" id="b-novo-produto">
-			<a href="./formulario" class="btn btn-primary pull-right h2">Novo
-				Produto</a>
 		</div>
 	</div>
 	<br>
@@ -77,12 +73,6 @@
 									<input name="product.id" value="${product.id}" type="hidden" />
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>
-								</form>
-								<form action="<c:url value='/product/formularioPreenchido'/>"
-									method="post">
-									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="DELETE"
-										class="btn btn-success">Editar</button>
 								</form>
 							</td>
 						</tr>

@@ -8,9 +8,7 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
-import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
-import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.DAO.ProductDAO;
 import br.com.caelum.vraptor.model.Product;
@@ -19,6 +17,7 @@ import br.com.caelum.vraptor.model.Product;
 public class ProductController {
 
 	private ProductDAO bd = new ProductDAO();
+
 	@Inject
 	private Result result;
 
@@ -52,6 +51,11 @@ public class ProductController {
 	@Get
 	public Product edita(long id) {
 		return bd.getById(id);
+	}
+
+	@Get
+	public List<Product> teste() {
+		return bd.getAll();
 	}
 
 	@Get
