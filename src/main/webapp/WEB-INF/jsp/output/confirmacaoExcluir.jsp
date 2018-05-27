@@ -27,16 +27,15 @@
 		</div>
 	</div>
 	<main>
-	<div id="main" class="container-fluid"
-		style="padding-left: 325px; padding-top: 50px">
+	<div id="main" class="container-fluid" style="padding-left: 325px; padding-top: 50px">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Cadastro Produtos</h2>
+				<h2>Saídas</h2>
 				<br>
-				<h4>Produto cadastrado com sucesso!</h4>
-				<br>
-				<a href="<c:url value='/product/formulario'/>" class="btn btn-primary">Novo Produto</a> 
-				<a href="<c:url value='/product/listar'/>" class="btn btn-danger">Voltar</a>
+				<h4>Saída excluida com sucesso!</h4>
+				<br> <a href="<c:url value='/product/formulario'/>"
+					class="btn btn-primary">Nova Saída</a> <a
+					href="<c:url value='/output/listar'/>" class="btn btn-danger">Voltar</a>
 			</div>
 		</div>
 	</main>

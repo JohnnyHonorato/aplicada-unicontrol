@@ -20,7 +20,7 @@
 				</div>
 				<li><a href="../product/listar">Produtos</a></li>
 				<li><a href="../input/listar">Entradas</a></li>
-				<li><a href="#">Saídas</a></li>
+				<li><a href="../output/listar">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
 			</ul>
@@ -66,7 +66,7 @@
 		<div class="row">
 			<div class="col-md-12" id="botao-salvar">
 				<button type="submit" class="btn btn-primary">Cadastrar</button>
-				<a href="<c:url value='/'/>" class="btn btn-danger">Cancelar</a>
+				<a href="<c:url value='/product/listar'/>" class="btn btn-danger">Cancelar</a>
 			</div>
 		</div>
 		</form>

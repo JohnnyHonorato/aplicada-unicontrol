@@ -18,9 +18,9 @@
 					<a href="#"><img width="111px" height="160"
 						src="../assets/img/ufpb2.png" /></a>
 				</div>
-				<li><a href="#">Produtos</a></li>
-				<li><a href="#">Entradas</a></li>
-				<li><a href="#">Saídas</a></li>
+				<li><a href="../product/listar">Produtos</a></li>
+				<li><a href="../input/listar">Entradas</a></li>
+				<li><a href="../output/listar">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
 			</ul>
@@ -32,22 +32,10 @@
 	style="padding-left: 325px; padding-top: 50px">
 	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Pesquisar Produto</h2>
-		</div>
-		<div class="col-sm-6">
-			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search"
-					type="text" placeholder="Pesquisar produto"> <span
-					class="input-group-btn">
-					<button class="btn btn-primary" type="submit">
-						<span class="far fa-searc"></span>
-					</button>
-				</span>
-			</div>
+			<h2>Saídas</h2>
 		</div>
 		<div class="col-sm-3" id="b-novo-produto">
-			<a href="./formulario" class="btn btn-primary pull-right h2">Novo
-				Produto</a>
+			<a href="./formulario" class="btn btn-primary pull-right h2">Nova Saída</a>
 		</div>
 	</div>
 	<br>
@@ -56,32 +44,29 @@
 			<table class="table table-striped" cellspacing="0" cellpadding="0">
 				<thead>
 					<tr>
-						<th>Código</th>
-						<th>Nome</th>
+						<th>Código do Produto</th>
 						<th>Quantidade</th>
-						<th>Descrição</th>
-						<th>Categoria</th>
+						<th>Requisitante</th>
+						<th>Setor Requisitante</th>
+						<th>Finalidade</th>
+						<th>Data</th>
 						<th class="actions"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${productList}" var="product">
+					<c:forEach items="${outputList}" var="output">
 						<tr>
-							<td>${product.id}</td>
-							<td>${product.name}</td>
-							<td>${product.amount}</td>
-							<td>${product.description}</td>
-							<td>${product.category}</td>
+							<td>${output.id_product}</td>
+							<td>${output.amount}</td>
+							<td>${output.requisitante}</td>
+							<td>${output.setorRequisitante}</td>
+							<td>${output.finalidade}</td>
+							<td>${output.data}</td>
 							<td>
-								<form action="<c:url value='/product/remover'/>" method="post">
-									<input name="product.id" value="${product.id}" type="hidden" />
+								<form action="<c:url value='/output/remover'/>" method="post">
+									<input name="output.id" value="${output.id}" type="hidden" />
 									<button type="submit" name="_method" value="DELETE"
 										class="btn btn-danger">Excluir</button>
-								</form>
-								<form action="<c:url value='/product/edita?id=${product.id}'/>" method="POST">
-									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="get"
-										class="btn btn-success">Editar</button>
 								</form>
 							</td>
 						</tr>

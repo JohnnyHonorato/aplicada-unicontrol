@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.caelum.vraptor.model.OutPut;
+import br.com.caelum.vraptor.model.Output;
 
 public class OutputDAO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -18,7 +18,7 @@ public class OutputDAO implements Serializable {
 
 	private ProductDAO productBD = new ProductDAO();
 
-	public void insert(OutPut output) {
+	public void insert(Output output) {
 		if (output.getAmount() <= 0)
 			throw new IllegalArgumentException();
 		productBD.updateAmount((output.getAmount() * -1), output.getId_product());
@@ -29,16 +29,16 @@ public class OutputDAO implements Serializable {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<OutPut> getAll() {
-		return manager.createQuery("FROM " + OutPut.class.getName()).getResultList();
+	public List<Output> getAll() {
+		return manager.createQuery("FROM " + Output.class.getName()).getResultList();
 	}
 
-	public OutPut getById(long id) {
-		return manager.find(OutPut.class, id);
+	public Output getById(long id) {
+		return manager.find(Output.class, id);
 	}
 
-	public void remove(OutPut outputD) {
-		OutPut output = manager.find(OutPut.class, outputD.getId());
+	public void remove(Output outputD) {
+		Output output = manager.find(Output.class, outputD.getId());
 		productBD.updateAmount(output.getAmount(), output.getId_product());
 		manager.getTransaction().begin();
 		manager.remove(output);

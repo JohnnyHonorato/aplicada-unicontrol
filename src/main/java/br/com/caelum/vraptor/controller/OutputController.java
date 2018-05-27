@@ -10,21 +10,22 @@ import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
-import br.com.caelum.vraptor.DAO.InputDAO;
+import br.com.caelum.vraptor.DAO.OutputDAO;
 import br.com.caelum.vraptor.model.Input;
+import br.com.caelum.vraptor.model.Output;
 
 @Controller
-public class InputController {
+public class OutputController {
 
-	private InputDAO bd = new InputDAO();
+private OutputDAO bd = new OutputDAO();
 	
 	@Inject
 	private Result result;
 
 	@Post
-	public void insert(Input input) {
-		bd.insert(input);
-		result.forwardTo(this).listar();
+	public void insert(Output output) {
+		bd.insert(output);
+		result.forwardTo(this).confirmacaoCad();
 	}
 
 	@Get
@@ -33,7 +34,7 @@ public class InputController {
 	}
 
 	@Get
-	public List<Input> listar() {
+	public List<Output> listar() {
 		return bd.getAll();
 	}
 
@@ -48,8 +49,8 @@ public class InputController {
 	}
 
 	@Delete
-	public void remover(Input input) {
-		bd.remove(input);
+	public void remover(Output output) {
+		bd.remove(output);
 		result.redirectTo(this).confirmacaoExcluir();
 	}
 }

@@ -31,12 +31,12 @@
 		style="padding-left: 325px; padding-top: 50px">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Cadastro Produtos</h2>
+				<h2>Cadastro Entradas</h2>
 				<br>
-				<h4>Produto cadastrado com sucesso!</h4>
+				<h4>Entrada cadastrada com sucesso!</h4>
 				<br>
-				<a href="<c:url value='/product/formulario'/>" class="btn btn-primary">Novo Produto</a> 
-				<a href="<c:url value='/product/listar'/>" class="btn btn-danger">Voltar</a>
+				<a href="<c:url value='/input/formulario'/>" class="btn btn-primary">Nova Entrada</a> 
+				<a href="<c:url value='/input/listar'/>" class="btn btn-danger">Voltar</a>
 			</div>
 		</div>
 	</main>

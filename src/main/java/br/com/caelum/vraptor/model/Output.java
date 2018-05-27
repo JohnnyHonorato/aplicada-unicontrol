@@ -6,9 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
-public class OutPut {
+public class Output {
 	
 	private long id;
 	private int amount;
@@ -36,6 +38,7 @@ public class OutPut {
 		this.amount = amount;
 	}
 
+	@Temporal(TemporalType.DATE)
 	public Date getData() {
 		return data;
 	}

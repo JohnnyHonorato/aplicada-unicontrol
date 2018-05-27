@@ -20,7 +20,7 @@
 				</div>
 				<li><a href="../product/listar">Produtos</a></li>
 				<li><a href="../input/listar">Entradas</a></li>
-				<li><a href="#">Saídas</a></li>
+				<li><a href="../output/listar">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
 				<li><a href="#">Sair</a></li>
 			</ul>
