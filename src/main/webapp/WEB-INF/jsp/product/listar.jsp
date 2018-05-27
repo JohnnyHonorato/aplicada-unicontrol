@@ -33,69 +33,67 @@
 			</ul>
 		</div>
 	</div>
-</body>
-<main>
-<div id="main" class="container-fluid"
-	style="padding-left: 325px; padding-top: 50px">
-	<div id="top" class="row">
-		<div class="col-sm-3">
-			<h2>Produtos</h2>
-		</div>
-		<div class="col-sm-6">
-			<div class="input-group h2">
-				<input name="consulta" class="form-control" id="txt_consulta"
-					type="text" placeholder="Pesquisar produto"> 
+	<div id="main" class="container-fluid"
+		style="padding-left: 325px; padding-top: 50px">
+		<div id="top" class="row">
+			<div class="col-sm-3">
+				<h2>Produtos</h2>
+			</div>
+			<div class="col-sm-6">
+				<div class="input-group h2">
+					<input name="consulta" class="form-control" id="txt_consulta"
+						type="text" placeholder="Pesquisar produto">
+				</div>
+			</div>
+			<div class="col-sm-3" id="b-novo-produto">
+				<a href="./formulario" class="btn btn-primary pull-right h2">Novo
+					Produto</a>
 			</div>
 		</div>
-		<div class="col-sm-3" id="b-novo-produto">
-			<a href="./formulario" class="btn btn-primary pull-right h2">Novo
-				Produto</a>
-		</div>
-	</div>
-	<br>
-	<div id="list" class="row">
-		<div class="table-responsive col-md-12">
-			<table id="tabela" class="table table-hover">
-				<thead>
-					<tr>
-						<th>Código do Produto</th>
-						<th>Nome</th>
-						<th>Quantidade</th>
-						<th>Descrição</th>
-						<th>Categoria</th>
-						<th class="actions"></th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${productList}" var="product">
+		<br>
+		<div id="list" class="row">
+			<div class="table-responsive col-md-12">
+				<table id="tabela" class="table table-hover">
+					<thead>
 						<tr>
-							<td>${product.id}</td>
-							<td>${product.name}</td>
-							<td>${product.amount}</td>
-							<td>${product.description}</td>
-							<td>${product.category}</td>
-							<td>
-								<form action="<c:url value='/product/remover'/>" method="post">
-									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="DELETE"
-										class="btn btn-danger">Excluir</button>
-								</form>
-								<form action="<c:url value='/product/edita?id=${product.id}'/>"
-									method="POST">
-									<input name="product.id" value="${product.id}" type="hidden" />
-									<button type="submit" name="_method" value="get"
-										class="btn btn-success">Editar</button>
-								</form>
-							</td>
+							<th>Código do Produto</th>
+							<th>Nome</th>
+							<th>Quantidade</th>
+							<th>Descrição</th>
+							<th>Categoria</th>
+							<th class="actions"></th>
 						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						<c:forEach items="${productList}" var="product">
+							<tr>
+								<td>${product.id}</td>
+								<td>${product.name}</td>
+								<td>${product.amount}</td>
+								<td>${product.description}</td>
+								<td>${product.category}</td>
+								<td>
+									<form action="<c:url value='/product/remover'/>" method="post">
+										<input name="product.id" value="${product.id}" type="hidden" />
+										<button type="submit" name="_method" value="DELETE"
+											class="btn btn-danger">Excluir</button>
+									</form>
+									<form action="<c:url value='/product/edita?id=${product.id}'/>"
+										method="POST">
+										<input name="product.id" value="${product.id}" type="hidden" />
+										<button type="submit" name="_method" value="get"
+											class="btn btn-success">Editar</button>
+									</form>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
 		</div>
-	</div>
-	<script>
-		$('input#txt_consulta').quicksearch('table#tabela tbody tr');
-	</script>
-	</body>
+		<script>
+			$('input#txt_consulta').quicksearch('table#tabela tbody tr');
+		</script>
+</body>
 </html>
 
