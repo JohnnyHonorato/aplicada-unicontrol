@@ -31,7 +31,7 @@
 		style="padding-left: 325px; padding-top: 50px">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Nova Entrada</h2>
+				<h2>Nova Saída</h2>
 			</div>
 			<div class="col-md-12">
 				<form action="<c:url value='/output/insert'/> " method="post">

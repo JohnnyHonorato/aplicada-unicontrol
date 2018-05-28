@@ -44,7 +44,7 @@
 			<div class="col-sm-6">
 				<div class="input-group h2">
 					<input name="consulta" class="form-control" id="txt_consulta"
-						type="text" placeholder="Pesquisar saída">
+						type="text" placeholder="Pesquisar entrada">
 				</div>
 			</div>
 			<div class="col-sm-3" id="b-novo-produto">
