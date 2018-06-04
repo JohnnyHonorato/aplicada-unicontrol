@@ -17,14 +17,14 @@ import br.com.caelum.vraptor.model.Input;
 public class InputController {
 
 	private InputDAO bd = new InputDAO();
-	
+
 	@Inject
 	private Result result;
 
 	@Post
 	public void insert(Input input) {
 		bd.insert(input);
-		result.forwardTo(this).listar();
+		result.redirectTo(this).confirmacaoCad();
 	}
 
 	@Get
@@ -38,12 +38,12 @@ public class InputController {
 	}
 
 	@Get
-	private void confirmacaoExcluir() {
+	public void confirmacaoExcluir() {
 
 	}
 
 	@Get
-	private void confirmacaoCad() {
+	public void confirmacaoCad() {
 
 	}
 

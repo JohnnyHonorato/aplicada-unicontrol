@@ -39,12 +39,12 @@ private OutputDAO bd = new OutputDAO();
 	}
 
 	@Get
-	private void confirmacaoExcluir() {
+	public void confirmacaoExcluir() {
 
 	}
 
 	@Get
-	private void confirmacaoCad() {
+	public void confirmacaoCad() {
 
 	}
 
