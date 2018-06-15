@@ -17,7 +17,7 @@ public class IndexController {
 	protected IndexController() {
 		this(null);
 	}
-	
+
 	@Inject
 	public IndexController(Result result) {
 		this.result = result;
