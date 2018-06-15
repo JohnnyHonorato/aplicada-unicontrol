@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body id="fundo_login">
 	<div class="login-page">
 		<img id="profile-img" class="profile-img-card"
 			src="http://subprefeituraccae.surge.sh/img/ufpb.png" />

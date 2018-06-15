@@ -22,7 +22,7 @@
 				<li><a href="../input/listar">Entradas</a></li>
 				<li><a href="../output/listar">Saídas</a></li>
 				<li><a href="#">Resumo</a></li>
-				<li><a href="#">Sair</a></li>
+				<li><a href="../login/formulario">Sair</a></li>
 			</ul>
 		</div>
 	</div>
