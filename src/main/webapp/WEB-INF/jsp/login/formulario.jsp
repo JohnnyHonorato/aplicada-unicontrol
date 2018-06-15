@@ -18,7 +18,7 @@
 		<div class="form">
 			<form class="login-form" action="<c:url value='/login/autentica'/>"
 				method="post">
-				<input type="text" placeholder="email" name="user.name" /> <input
+				<input type="text" placeholder="email" name="user.nome" /> <input
 					type="password" placeholder="senha" name="user.senha" />
 				<button type="submit" value="Login">entrar</button>
 				<p class="message">
