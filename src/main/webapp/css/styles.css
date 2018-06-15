@@ -1,86 +1,165 @@
 * {
-	font-family: 'bahnschrift';
-	color: #448B93;
-}
-
-@font-face {
-	font-family: 'bahnschrift';
-	src: url('assets/font/bahnschrift.woff') format('woff');
-}
+  font-family: 'Bahnschrift';
+  color: #448B93; }
 
 #confirm {
-	position: left;
-}
+  position: left; }
 
 #sidebar-wrapper {
-	left: -300px;
-	width: 300px;
-	background-color: #51A8B1;
-	color: white;
-	position: fixed;
-	height: 100%;
-	z-index: 1;
-}
+  left: -300px;
+  width: 300px;
+  background-color: #51A8B1;
+  color: white;
+  position: fixed;
+  height: 100%;
+  z-index: 1; }
 
 .sidebar-nav {
-	position: fixed;
-	top: 0;
-	margin: 0;
-	padding: 0;
-	width: 300px;
-	list-style: none;
-}
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  list-style: none; }
 
 .sidebar-nav li {
-	font-size: 20px;
-	text-indent: 55px;
-	line-height: 70px;
-}
+  font-size: 20px;
+  text-indent: 55px;
+  line-height: 70px; }
 
 .sidebar-nav li a {
-	color: white;
-	display: block;
-	text-decoration: none;
-}
+  color: white;
+  display: block;
+  text-decoration: none; }
 
 .sidebar-nav li a:hover {
-	background: #448B93;
-	color: white;
-	text-decoration: none;
-}
+  background: #448B93;
+  color: white;
+  text-decoration: none; }
 
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
-	background-color: #448B93;
-	text-decoration: none;
-}
+  background-color: #448B93;
+  text-decoration: none; }
 
 #ufpb-logo {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	padding-left: 110px;
-}
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 110px; }
 
 #sidebar-wrapper.sidebar-toggle {
-	transition: all 0.3s ease-out;
-	margin-left: -200px;
-}
+  transition: all 0.3s ease-out;
+  margin-left: -200px; }
 
 .footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	color: white;
-	text-align: center;
-	padding-left: 325px;
-}
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-left: 325px; }
 
 .btn-primary {
-	background-color: #51A8B1;
-	border-color: #51A8B1;
-}
+  background-color: #51A8B1;
+  border-color: #51A8B1; }
 
 #sidebar-wrapper.sidebar-toggle {
-	transition: 0s;
-	left: 200px;
+  transition: 0s;
+  left: 200px; }
+
+/* login */ 
+
+#profile-img{
+  width: 280px;
+  padding: 30px;
+}
+
+.login-page {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  border-radius: 12px;
+}
+.form input {
+  outline: 0;
+  background: #FFFFFF;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 6px;
+  border:1px solid #e2e2e2;
+}
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #51A8B1;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 6px;
+
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #448B93;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #51A8B1;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
 }
